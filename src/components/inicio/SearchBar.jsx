@@ -43,7 +43,6 @@ const SearchBar = () => {
             <div className="search-bar">
                 <input type="text" placeholder="Buscar productos..." value={searchQuery} onChange={handleSearchChange} />
             </div>
-            {/* <ItemList products={filteredProducts} /> */}
             <SearchItems products={filteredProducts}/>
         </div>
     )

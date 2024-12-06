@@ -9,14 +9,10 @@
 
 /* Item detail styles */
 .item-detail {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
-    padding: 2rem;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 .item-detail h2 {
@@ -31,11 +27,46 @@
     margin: 0.5rem 0;
 }
 
-.item-detail img {
-    max-width: 100%;
+.item-detail-img {
+    flex-basis: 40%;
+    margin-right: 20px;
+}
+
+.item-detail-img img {
+    width: 100%;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.item-detail-info {
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.size-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.size-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
     border-radius: 5px;
-    margin: 1rem 0;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease;
+}
+
+.size-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.size-btn.selected {
+    background-color: #333;
+    color: white;
+    border-color: #333;
 }
 
 /* Loading state */
@@ -54,45 +85,42 @@
 
 .item-counter-controls {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .item-counter-controls button {
-    background-color: #3498db;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
+    color: #413434;
+    padding: 10px;
+    background-color: #bdbdbd;
+    border: 1px solid #f7f7f7;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
+
 .item-counter-controls button:hover {
-    background-color: #2980b9;
+    background-color: #a2abb1;
 }
 
 .item-counter-controls p {
-    font-size: 1.2rem;
-    color: #34495e;
     margin: 0;
+    font-size: 18px;
 }
 
 .item-counter-add {
-    background-color: #e74c3c;
-    color: #ffffff;
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
     border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .item-counter-add:hover {
-    background-color: #c0392b;
+    background-color: #0056b3;
 }
 
 /* Responsive design */

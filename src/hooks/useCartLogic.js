@@ -10,10 +10,11 @@ const useCartLogic = () => {
         localStorage.setItem("cart", JSON.stringify(cart))
     }, [cart])
 
-    const addItem = ((itemToAdd, quantity) => {
+    const addItem = ((itemToAdd, quantity, size) => {
+        
         const newCart = [...cart];
         const inCart = newCart.find(item => item.id === itemToAdd.id);
-        inCart ? inCart.quantity += quantity : newCart.push({ ...itemToAdd, quantity: quantity });
+        inCart ? inCart.quantity += quantity : newCart.push({ ...itemToAdd, quantity: quantity, talle: size});
         setCart(newCart);
     })
 

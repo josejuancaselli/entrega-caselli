@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import ItemCounter from './ItemCounter'
+import ItemCounter from './ItemCounter';
 import './ItemDetail.css';
 
 const ItemDetail = ({ detail }) => {
     const [isLoading, setIsLoading] = useState(true);
+    const [selectedSize, setSelectedSize] = useState(''); 
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -12,26 +13,32 @@ const ItemDetail = ({ detail }) => {
         return () => clearTimeout(timer);
     }, []);
 
+    const handleSizeSelect = (size) => {
+        setSelectedSize(size); // Actualiza el estado con el talle seleccionado
+    };
+
     return (
-        <div className='item-detail'>
-            <img src={detail.img} alt={detail.nombre} />
-            <div>
-                <h2>{detail.nombre} {detail.descripcion}</h2>
-                <p>Selecciona tu talle</p>
-                <div>
-                    <button>XS</button>
-                    <button>S</button>
-                    <button>M</button>
-                    <button>L</button>
-                    <button>XL</button>
-                </div>
-                <p className='loading'>
+        <div className="item-detail">
+            <div className="item-detail-img">
+                <img src={detail.img} alt={detail.nombre} />
+            </div>
+            <div className="item-detail-info">
+                <h2>{detail.nombre} - {detail.descripcion}</h2>
+                <p className="loading">
                     {isLoading ? 'Cargando...' : (detail.precio && !isNaN(detail.precio)) ? `Precio: $${detail.precio.toLocaleString('es-AR')}` : 'Cargando...'}
                 </p>
-                <ItemCounter detail={detail} />
+                <p>Selecciona tu talle</p>
+                <div className="size-buttons">
+                    <button onClick={() => handleSizeSelect('XS')} className={`size-btn ${selectedSize === 'XS' ? 'selected' : ''}`}>XS</button>
+                    <button onClick={() => handleSizeSelect('S')} className={`size-btn ${selectedSize === 'S' ? 'selected' : ''}`}>S</button>
+                    <button onClick={() => handleSizeSelect('M')} className={`size-btn ${selectedSize === 'M' ? 'selected' : ''}`}>M</button>
+                    <button onClick={() => handleSizeSelect('L')} className={`size-btn ${selectedSize === 'L' ? 'selected' : ''}`}>L</button>
+                    <button onClick={() => handleSizeSelect('XL')} className={`size-btn ${selectedSize === 'XL' ? 'selected' : ''}`}>XL</button>
+                </div>
+                <ItemCounter detail={detail} selectedSize={selectedSize} />
             </div>
         </div>
-    )
+    );
 }
 
-export default ItemDetail
+export default ItemDetail;

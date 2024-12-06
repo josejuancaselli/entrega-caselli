@@ -78,7 +78,7 @@ const Checkout = () => {
 
                         <div className="checkout-buttons">
                             <button type="submit" className="btn-pay">Pagar</button>
-                            <Link to="/"><button type="button" className="btn-cancel" onClick={() => { emptyCart(); }}>Cancelar compra</button></Link>
+                            <Link to="/carrito"><button type="button" className="btn-cancel" onClick={() => { emptyCart(); }}>Cancelar compra</button></Link>
                         </div>
                     </form>
                 </>

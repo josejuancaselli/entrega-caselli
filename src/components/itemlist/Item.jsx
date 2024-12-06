@@ -6,10 +6,11 @@ const Item = ({ product }) => {
     
     return (
         <div key={product.id}>
+            <Link to={`/item/${product.id}`}>
             <img src={product.img} alt={product.nombre} />
             <h2>{product.nombre} {product.descripcion}</h2>
             <p>${product.precio.toLocaleString('es-AR')}</p>
-            <Link to={`/item/${product.id}`}>Ver más</Link>
+            Ver más</Link>
         </div>
     )
 }
