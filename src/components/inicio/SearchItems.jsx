@@ -12,7 +12,6 @@ const SearchItems = ({ products }) => {
                             <div>
                                 <h2>{item.nombre}</h2>
                                 <p>{item.descripcion}</p>
-
                             </div>
                         </li>
                     </Link>
