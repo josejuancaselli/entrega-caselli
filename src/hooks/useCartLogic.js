@@ -11,7 +11,6 @@ const useCartLogic = () => {
     }, [cart])
 
     const addItem = ((itemToAdd, quantity, size) => {
-        
         const newCart = [...cart];
         const inCart = newCart.find(item => item.id === itemToAdd.id);
         inCart ? inCart.quantity += quantity : newCart.push({ ...itemToAdd, quantity: quantity, talle: size});
@@ -27,7 +26,7 @@ const useCartLogic = () => {
             addItem(prod, -1);  
         }
     };
-    
+
     const getTotalQuantity = (() => {
         return cart.reduce((acc, item) => acc + item.quantity, 0);
     });

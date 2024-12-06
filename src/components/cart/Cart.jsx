@@ -15,7 +15,7 @@ const Cart = () => {
                     {cart.map((prod) => (
                         <CartItem key={prod.id} prod={prod} />
                     ))}
-                    {totalPrice > 0 && <p>Precio final: ${totalPrice.toLocaleString('es-AR')}</p>}
+                    {totalPrice > 0 && <p>Precio final: ${totalPrice}</p>}
                     <div className="cart-container-buttons">
                         <button onClick={emptyCart} className="empty-cart">Vaciar</button>
                         <button className="checkout-button">

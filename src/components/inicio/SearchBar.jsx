@@ -28,7 +28,7 @@ const SearchBar = () => {
             const filtered = products.filter((product) => {
                 return searchWords.every((word) => product.descripcion.toLowerCase().includes(word) || product.nombre.toLowerCase().includes(word))
             });
-            setFilteredProducts(filtered);
+            setFilteredProducts(filtered.slice(0,5));
         } else{
             setFilteredProducts([])
         }

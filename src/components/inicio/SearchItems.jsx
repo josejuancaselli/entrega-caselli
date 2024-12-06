@@ -12,11 +12,13 @@ const SearchItems = ({ products }) => {
                             <div>
                                 <h2>{item.nombre}</h2>
                                 <p>{item.descripcion}</p>
+
                             </div>
                         </li>
                     </Link>
                 );
             })}
+            {products[0] && <Link to={`/productos/${products[0]?.categoria}`}>ver mas</Link>}
         </ul>
     );
 };
