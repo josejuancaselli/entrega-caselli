@@ -1,7 +1,6 @@
 import { createContext, useContext } from "react";
 import useCartLogic from "../hooks/useCartLogic";
 
-
 const CartContext = createContext()
 
 export const CartProvider = ({ children }) => {
