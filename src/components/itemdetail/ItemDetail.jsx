@@ -14,12 +14,22 @@ const ItemDetail = ({ detail }) => {
 
     return (
         <div className='item-detail'>
-            <h2>{detail.nombre} {detail.descripcion}</h2>
             <img src={detail.img} alt={detail.nombre} />
-            <p className='loading'>
-                {isLoading ? 'Cargando...' : (detail.precio && !isNaN(detail.precio)) ? `Precio: $${detail.precio.toLocaleString('es-AR')}` : 'Cargando...'}
-            </p>
-            <ItemCounter detail={detail} />
+            <div>
+                <h2>{detail.nombre} {detail.descripcion}</h2>
+                <p>Selecciona tu talle</p>
+                <div>
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+                <p className='loading'>
+                    {isLoading ? 'Cargando...' : (detail.precio && !isNaN(detail.precio)) ? `Precio: $${detail.precio.toLocaleString('es-AR')}` : 'Cargando...'}
+                </p>
+                <ItemCounter detail={detail} />
+            </div>
         </div>
     )
 }
