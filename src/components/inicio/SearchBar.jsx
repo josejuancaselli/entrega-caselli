@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
-import ItemList from '../itemlist/ItemList'
 import { db } from '../../firebase/configFirebase'
-
+import SearchItems from './SearchItems'
+import "./inicio.css"
 
 
 const SearchBar = () => {
@@ -43,7 +43,8 @@ const SearchBar = () => {
             <div className="search-bar">
                 <input type="text" placeholder="Buscar productos..." value={searchQuery} onChange={handleSearchChange} />
             </div>
-            <ItemList products={filteredProducts} />
+            {/* <ItemList products={filteredProducts} /> */}
+            <SearchItems products={filteredProducts}/>
         </div>
     )
 }

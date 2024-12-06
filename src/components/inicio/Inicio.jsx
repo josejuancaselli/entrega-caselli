@@ -1,5 +1,5 @@
-import SearchBar from "./inicio/SearchBar"
-
+import SearchBar from "./SearchBar"
+import "./inicio.css"
 
 
 const Inicio = () => {

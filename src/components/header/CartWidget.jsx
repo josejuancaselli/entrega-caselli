@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FiShoppingCart } from 'react-icons/fi';
 import { useCart } from '../../context/CartContext';
+import './Header.css';
 
 const CartWidget = () => {
   const { getTotalQuantity } = useCart();

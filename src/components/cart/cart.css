@@ -1,0 +1,188 @@
+/* Estilo general para el carrito */
+.cart-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.cart-container p {
+    font-size: 1rem;
+    color: #34495e;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item h2 {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+.cart-item p {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Botones de acción */
+.cart-item button,
+.cart-container button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-item button:hover,
+.cart-container button:hover {
+    background-color: #2980b9;
+}
+
+.cart-container .empty-cart {
+    background-color: #e74c3c;
+}
+
+.cart-container .empty-cart:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo para el botón de "Ir a pagar" */
+.cart-container .checkout-button {
+    background-color: #27ae60;
+}
+
+.cart-container .checkout-button:hover {
+    background-color: #1e8449;
+}
+
+/* Alinear botones al centro */
+.cart-container-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* Ajuste para cantidad de productos */
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-quantity p {
+    margin: 0 1rem;
+}
+
+.cart-item-thumbnail {
+    width: 50px;        
+    height: 50px;       
+    object-fit: cover;  
+    margin-right: 10px; 
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    /* Estilos para el contenedor del carrito */
+    .cart-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    /* Estilo para el título del carrito */
+    .cart-container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Ajustar el tamaño de los íconos y texto dentro de los productos del carrito */
+    .cart-item {
+        flex-direction: column; /* Apilar los elementos en lugar de alinearlos en fila */
+        padding: 1rem;
+    }
+
+    .cart-item-thumbnail {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    }
+
+    .cart-item h2,
+    .cart-item p {
+        font-size: 1rem;
+    }
+
+    .cart-item button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        margin-top: 10px;
+    }
+
+    /* Ajuste para los botones de la parte inferior del carrito */
+    .cart-container-buttons {
+        flex-direction: column; /* Los botones se apilan verticalmente */
+    }
+
+    .cart-container .checkout-button,
+    .cart-container .empty-cart {
+        width: 100%; /* Los botones ocupan todo el ancho */
+        margin-top: 10px;
+    }
+}
+
+/* Media query para pantallas medianas (tabletas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cart-container {
+        padding: 2rem;
+    }
+
+    /* Ajustes en los cart-items */
+    .cart-item {
+        flex-direction: row; /* Los items vuelven a ser horizontales */
+        align-items: center;
+    }
+
+    .cart-item-thumbnail {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cart-item h2,
+    .cart-item p {
+        font-size: 1.1rem;
+    }
+
+    /* Ajustar tamaño de los botones en tabletas */
+    .cart-item button,
+    .cart-container button {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    .cart-container-buttons {
+        justify-content: center;
+    }
+}

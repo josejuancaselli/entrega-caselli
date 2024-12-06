@@ -1,0 +1,123 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Title styles */
+.title h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar styles */
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-item {
+    margin: 0 1rem;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color: #34495e;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-item a:hover {
+    color: #e74c3c;
+}
+
+/* CartWidget styles */
+.cartWidget {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cartWidget .icon {
+    font-size: 1.5rem;
+    color: #34495e;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cartWidget .icon:hover {
+    color: #e74c3c;
+}
+
+.cartWidget p {
+    position: absolute;
+    top: 7px;
+    right: -15px;
+    background-color: #e74c3c;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1rem;
+    min-height: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+    }
+
+    .navbar-item {
+        margin: 0.5rem 0;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .cartWidget .icon {
+        font-size: 1.2rem;
+    }
+}

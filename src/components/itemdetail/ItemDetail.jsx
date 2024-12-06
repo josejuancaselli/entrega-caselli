@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ItemCounter from './ItemCounter'
+import './ItemDetail.css';
 
 const ItemDetail = ({ detail }) => {
     const [isLoading, setIsLoading] = useState(true);

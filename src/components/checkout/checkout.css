@@ -1,0 +1,147 @@
+/* Estilos para el contenedor del formulario de Checkout */
+.checkout-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del checkout */
+.checkout-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Etiquetas de los campos de entrada */
+.form-label {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los campos de entrada */
+.form-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Precio total */
+.total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Lista de productos */
+.cart-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.cart-item-summary {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* Estilos para los botones de Checkout */
+.checkout-buttons, .confirmation-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Botón de pagar */
+.btn-pay {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-pay:hover {
+    background-color: #218838;
+}
+
+/* Botones de cancelar compra */
+.btn-cancel  {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background-color: #d32f2f;
+}
+
+/* Botón de confirmar */
+.btn-confirm button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-confirm button:hover {
+    background-color: #0056b3;
+}
+
+.thumbnail {
+    width: 40px; 
+    height: 40px; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    margin-right: 10px; 
+}
+
+/* Estilos para el contenedor principal del saludo */
+.saludo-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título del saludo */
+.saludo-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #28a745;
+}
+
+/* Estilos para el número de la orden */
+.saludo-order-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 10px;
+}
+

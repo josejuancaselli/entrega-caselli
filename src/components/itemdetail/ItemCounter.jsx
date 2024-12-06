@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useCart } from '../../context/CartContext'
+import './ItemDetail.css';
 
 const ItemCounter = ({ detail }) => {
     const { addItem } = useCart()

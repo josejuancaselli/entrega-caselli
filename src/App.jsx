@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Header from "./components/Header"
+import Header from "./components/header/Header"
 import Cart from "./components/cart/Cart"
-import ItemListContainer from "./components/ItemListContainer"
+import ItemListContainer from "./components/itemlist/ItemListContainer"
 import ItemDetailContainer from "./components/itemdetail/ItemDetailContainer"
 import Contacto from "./components/contacto/Contacto"
 import { CartProvider } from "./context/CartContext"
 import Checkout from "./components/checkout/Checkout"
-// import "./App.css"
-import Inicio from "./components/Inicio"
+import "./App.css"
+import Inicio from "./components/inicio/Inicio"
 
 function App() {
 
