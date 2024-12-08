@@ -55,3 +55,13 @@ git checkout -b nombre-de-la-rama
 Haz un pull request para revisar tus aportes.
 Licencia
 Este proyecto no tiene una licencia explícita. Consulta al autor si planeas usar el código.
+
+VARIABLES DE ENTORNO
+
+VITE_ENTREGA = ejemplo
+VITE_APIKEY_FIREBASE = AIzaSyD1pWTuGnjm8dksLV3i4-faOIycqCv7ocM
+VITE_AUTHDOMAIN_FIREBASE = sobrelasilla-5d229.firebaseapp.com
+VITE_PROJECTID_FIREBASE = sobrelasilla-5d229
+VITE_STORAGEBUCKET_FIREBASE = sobrelasilla-5d229.firebasestorage.app
+VITE_MESSAGINGSENDERID_FIREBASE = 80205755005
+VITE_APPID_FIREBASE = 1:80205755005:web:b064864f45eba3aaa7b714
