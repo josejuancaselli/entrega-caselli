@@ -14,7 +14,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -43,7 +43,7 @@
     position: relative;
     z-index: 2;
     color: #ffffff;
-    background: linear-gradient(to bottom, transparent, rgba(119, 29, 29, 0.7));
+    background: linear-gradient(to top, transparent, rgba(119, 29, 29, 0.7));
     padding: 1rem;
     border-radius: 8px;
     opacity: 0;
@@ -105,6 +105,8 @@
 
 
 /* Responsive design */
+
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -114,5 +116,21 @@
 
     .container>div {
         width: 90%;
+    }
+
+    .tarjeta {
+        transform: none;
+        /* No hay transformación en móviles */
+    }
+
+    .tarjeta .info {
+        opacity: 1;
+        /* Información siempre visible */
+        transform: translateY(0px);
+    }
+
+    .tarjeta:hover .info {
+        transform: none;
+        /* Hover deshabilitado */
     }
 }
