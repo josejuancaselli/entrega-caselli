@@ -1,32 +1,25 @@
-import { collection, getDocs, query, where } from 'firebase/firestore'
-import React, { useState, useEffect } from 'react'
-import { db } from '../../firebase/configFirebase'
+
+import { useEffect } from "react";
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import './itemlist.css';
+import {useFetchProducts} from '../../hooks/useProducts'
+import { useCart } from '../../context/CartContext'
+import Loading from '../loading/Loading'
 
 const ItemListContainer = () => {
-    const [products, setProducts] = useState([])
-    const { categoria } = useParams()
-
-    useEffect(() => {
-        const productosRef =  categoria ? query(collection(db, "products"), where("categoria", "==", categoria)) : collection(db, "products")            
-        getDocs(productosRef)
-        .then ((resp) =>{
-            setProducts(
-                resp.docs.map((doc)=>{
-                    return{...doc.data(), id: doc.id}
-                })
-            )
-        })
-    }, [categoria])
+    const { categoria } = useParams();
+    const { products, loading } = useFetchProducts(categoria);
+    
 
     return (
         <div>
-        <h1 className='container-title'>Los mejores productos de Adidas a un Click de distancia</h1> 
-        
-        
-            <ItemList products={products} />
+            {loading ?
+                <Loading /> :
+                <main>
+                    <h1 className='container-title'>{...products[0].categoria}</h1>
+                    <ItemList products={products} />
+                </main>}
         </div>
     )
 }

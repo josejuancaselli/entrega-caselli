@@ -17,10 +17,10 @@ const Cart = () => {
                     ))}
                     {totalPrice > 0 && <p>Precio final: ${totalPrice}</p>}
                     <div className="cart-container-buttons">
-                        <button onClick={emptyCart} className="empty-cart">Vaciar</button>
-                        <button className="checkout-button">
+                    <button className="checkout-button">
                             <Link to="/checkout" style={{ textDecoration: 'none', color: 'inherit' }}>Ir a pagar</Link>
                         </button>
+                        <button onClick={emptyCart} className="empty-cart">Vaciar</button>
                     </div>
                 </div>
                 )}

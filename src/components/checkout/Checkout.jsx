@@ -5,35 +5,42 @@ import { db } from "../../firebase/configFirebase";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./checkout.css"
+import Loading from "../loading/Loading"
+
 
 const Checkout = () => {
     const { emptyCart, cart, getTotalPrice } = useCart();
-    const [order, setOrder] = useState(""); 
+    const [order, setOrder] = useState("");
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const [clientName, setClientName] = useState(""); 
-    const [cartMesssage, setCartMessage] = useState("")
+    const [clientName, setClientName] = useState("");
+    const [loading, setLoading] = useState(false)
+
 
     const pagar = (data) => {
-        if (cart.length === 0) {
-            setCartMessage("El carrito esta vacío")
-        }
-
         const pedido = {
             cliente: data,
             productos: cart,
             total: getTotalPrice(),
         };
+        setLoading(true)
         const pedidosRef = collection(db, "pedidos");
         addDoc(pedidosRef, pedido)
             .then((doc) => {
                 setOrder(doc.id);
                 setClientName(`${data.nombre} ${data.apellido}`);
                 emptyCart();
+            }).catch((error) => {
+                console.error("Error al realizar el pedido:", error);
+            })
+            .finally(() => {
+                setLoading(false);
             });
     };
 
     return (
+
         <div className="checkout-container">
+            {loading && <Loading />}
             {order ? (
                 <div className="saludo-container">
                     <h1 className="saludo-title">¡Gracias por tu compra {clientName}!</h1>
@@ -42,7 +49,7 @@ const Checkout = () => {
             ) : (
                 <>
                     <h1 className="checkout-title">Checkout</h1>
-                    {cartMesssage && <p className="cart-message">{cartMesssage}</p>}
+                    {cart.length === 0 && <p> El carrito esta vacío</p>}
                     <form onSubmit={handleSubmit(pagar)} className="checkout-form">
 
                         <label className="form-label">Nombre:</label>
@@ -73,9 +80,7 @@ const Checkout = () => {
                                 </li>
                             ))}
                         </ul>
-
                         <p className="total-price">Total: ${getTotalPrice().toLocaleString('es-AR')}</p>
-
                         <div className="checkout-buttons">
                             <button type="submit" className="btn-pay">Pagar</button>
                             <Link to="/carrito"><button type="button" className="btn-cancel" onClick={() => { emptyCart(); }}>Cancelar compra</button></Link>

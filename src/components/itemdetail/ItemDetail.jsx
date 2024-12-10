@@ -1,20 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ItemCounter from './ItemCounter';
 import './itemdetail.css';
 
 const ItemDetail = ({ detail }) => {
-    const [isLoading, setIsLoading] = useState(true);
-    const [selectedSize, setSelectedSize] = useState(''); 
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 0);
-        return () => clearTimeout(timer);
-    }, []);
-
+    const [selectedSize, setSelectedSize] = useState('');
+    
     const handleSizeSelect = (size) => {
-        setSelectedSize(size); // Actualiza el estado con el talle seleccionado
+        setSelectedSize(size);
     };
 
     return (
@@ -24,9 +16,7 @@ const ItemDetail = ({ detail }) => {
             </div>
             <div className="item-detail-info">
                 <h2>{detail.nombre} - {detail.descripcion}</h2>
-                <p className="loading">
-                    {isLoading ? 'Cargando...' : (detail.precio && !isNaN(detail.precio)) ? `Precio: $${detail.precio.toLocaleString('es-AR')}` : 'Cargando...'}
-                </p>
+                <p className="loading"> Precio: ${detail.precio.toLocaleString('es-AR')} </p>
                 <p>Selecciona tu talle</p>
                 <div className="size-buttons">
                     <button onClick={() => handleSizeSelect('XS')} className={`size-btn ${selectedSize === 'XS' ? 'selected' : ''}`}>XS</button>

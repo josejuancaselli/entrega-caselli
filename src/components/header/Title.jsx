@@ -3,9 +3,7 @@ import './header.css';
 
 const Title = () => {
     return (
-        <div className='title'>
-            <Link to="/"><h1>Desde La Silla</h1></Link>
-        </div>
+        <Link to="/" className='navbar-brand'>Desde La Silla</Link>
     )
 }
 
