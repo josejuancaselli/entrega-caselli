@@ -5,19 +5,19 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./contacto.css";
 import AOS from "aos";
-import "aos/dist/aos.css"; 
+import "aos/dist/aos.css";
 
 const Contacto = () => {
     AOS.init({
-        duration: 3000, 
-        once: true, 
+        duration: 3000,
+        once: true,
     });
     const { register, handleSubmit } = useForm();
     const [mensaje, setMensaje] = useState("");
     const enviar = () => {
         setMensaje("Hemos recibido su consulta");
     };
-
+    console.log(mensaje)
     return (
         <main>
             <h1>Contacto</h1>
@@ -60,12 +60,14 @@ const Contacto = () => {
                     <textarea cols="30" rows="10" placeholder="Escribe tu consulta aquí"></textarea>
 
                     <button type="submit">Enviar</button>
-                    {mensaje && (
-                        <p className="success-message">
-                            {mensaje}, puedes seguir comprando <Link to="/">aquí</Link>.
-                        </p>
-                    )}
+                    
                 </form>
+                {mensaje && (
+                        
+                            <p className="success-message">  {mensaje}, podés seguir comprando <Link to="/">acá</Link>.</p>
+                            
+
+                    )}
             </div>
         </main>
     );
