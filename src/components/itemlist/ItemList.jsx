@@ -5,16 +5,16 @@ import './itemlist.css';
 const ItemList = ({ products }) => {
 
 
-    
+
     return (
-        <div className="container">
-            <h1>{products.nombre}</h1>
-            {products.map((item) => {
-                return (
-                    <Item key={item.id} product={item} />
-                )
-            })}
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-5 gy-7">
+            {products.map((item) => (
+                <div className="col" key={item.id}>
+                    <Item product={item} />
+                </div>
+            ))}
         </div>
+
     )
 }
 

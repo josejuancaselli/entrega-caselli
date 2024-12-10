@@ -3,7 +3,7 @@ import './header.css';
 
 const Title = () => {
     return (
-        <Link to="/" className='navbar-brand'>Desde La Silla</Link>
+        <Link to="/" className='navbar-brand'>Sobre La Silla</Link>
     )
 }
 

@@ -17,13 +17,14 @@ body {
 
 /* Estilos para el footer */
 .footer {
+    display: flex;
+    justify-content: space-around;
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
     font-family: Arial, sans-serif;
     margin-top: auto;  /* Empuja el footer hacia abajo si no hay suficiente contenido */
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -33,7 +34,9 @@ body {
     margin-bottom: 20px;
     color: #ff5f6d; /* Un color atractivo */
 }
-
+a{
+    text-decoration: none;
+}
 .footer ul {
     list-style: none;
     padding: 0;
@@ -50,7 +53,7 @@ body {
 .footer ul li a {
     color: white;
     font-size: 24px;
-    text-decoration: none;
+    
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
