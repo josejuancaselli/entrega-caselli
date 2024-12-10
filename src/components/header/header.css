@@ -96,6 +96,8 @@ nav {
     min-height: 1rem;
 }
 
+
+
 /* Responsive design */
 @media (max-width: 768px) {
     header {
