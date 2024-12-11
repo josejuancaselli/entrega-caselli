@@ -3,7 +3,29 @@ import './header.css';
 
 const Navbar = () => {
     return (
-        <nav>
+        // <nav>
+
+
+        //     <ul >
+        //         <li >                    <Link to="/">Inicio</Link>                </li>
+        //         <li >                    <Link to="/contacto">Contacto</Link>                </li>
+        //         <li><Link className="dropdown-item" to="/productos/Remeras">Remeras</Link></li>
+        //         <li><Link className="dropdown-item" to="/productos/Buzos">Buzos</Link></li>
+        //         <li><Link className="dropdown-item" to="/productos/Zapatillas">Zapatillas</Link></li>
+        //     </ul>
+        
+        // </nav >
+
+
+
+
+
+
+
+
+
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <div className="container-fluid">
             <button className="navbar-toggler"
                 type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -25,6 +47,7 @@ const Navbar = () => {
                         </ul>
                     </li>
                 </ul>
+            </div>
             </div>
         </nav>
     )

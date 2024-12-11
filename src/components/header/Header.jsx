@@ -6,14 +6,24 @@ import './header.css';
 
 const Header = () => {
   return (
-    <header className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+    
+
+
+    <header >
         <Title />
-        <Navbar />
+        <Navbar />   
         <CartWidget />
-      </div>
     </header>
   )
 }
 
 export default Header
+
+
+{/* <header >
+      <div >
+        <Title />
+        <Navbar />
+        <CartWidget />
+      </div>
+    </header> */}

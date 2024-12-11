@@ -1,4 +1,4 @@
-/* General styles */
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -6,7 +6,7 @@ body {
     color: #333;
 }
 
-/* Header styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -20,10 +20,9 @@ header {
     z-index: 1000;
 }
 
-/* Title styles */
-.navbar-brand {
-        color: #ff5f6d; /* Un color atractivo */
 
+.navbar-brand {
+        color: #ff5f6d; 
 }
 
 .title a {
@@ -31,7 +30,7 @@ header {
     color: inherit;
 }
 
-/* Navbar styles */
+
 nav {
     flex: 1;
     text-align: center;
@@ -61,7 +60,7 @@ nav {
     color: #e74c3c;
 }
 
-/* CartWidget styles */
+
 .cartWidget {
     margin-right: 5px;
     display: flex;
@@ -98,7 +97,7 @@ nav {
 
 
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
