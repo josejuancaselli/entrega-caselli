@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -22,7 +21,7 @@ header {
 
 
 .navbar-brand {
-        color: #ff5f6d; 
+    color: #ff5f6d;
 }
 
 .title a {
@@ -39,7 +38,7 @@ nav {
 .navbar-list {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 0;
     margin: 0;
 }
@@ -82,11 +81,10 @@ nav {
 .cartWidget p {
     position: absolute;
     top: 7px;
-    right: -15px;
+    right: -10px;
     background-color: #e74c3c;
     color: #ffffff;
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 0.7rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -95,15 +93,23 @@ nav {
     min-height: 1rem;
 }
 
-
+.widget-button {
+    border: none !important;
+    
+}
+.container-fluid{
+    justify-content: center !important;
+}
 
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
-
+    .navbar{
+        justify-content: center;
+    }
     .navbar-list {
         flex-direction: column;
     }
@@ -118,5 +124,14 @@ nav {
 
     .cartWidget .icon {
         font-size: 1.2rem;
+    }
+    .navbar-collapse{
+        background-color: #e74c3c;
+        z-index: 1;
+        position: absolute !important;
+        top: 100%!important;
+    }
+    li{
+        list-style: none;
     }
 }

@@ -17,12 +17,11 @@ const Contacto = () => {
     const enviar = () => {
         setMensaje("Hemos recibido su consulta");
     };
-    console.log(mensaje)
+
     return (
         <main>
             <h1>Contacto</h1>
             <div className="contacto-container">
-
                 <section className="contacto-section">
                     <p>
                         Aquí puedes dejarnos tus consultas sobre nuestros productos, hacer solicitudes de reembolso o dejarnos un comentario sobre tu experiencia.
@@ -39,8 +38,8 @@ const Contacto = () => {
                             <li>Dirección: Av. San Juan 123, CABA</li>
                         </ul>
                     </div>
-
                 </section>
+
                 <form onSubmit={handleSubmit(enviar)} className="contacto-form">
                     <label>Nombre:</label>
                     <input
@@ -57,17 +56,19 @@ const Contacto = () => {
                     />
 
                     <label>Dejanos tu consulta:</label>
-                    <textarea cols="30" rows="10" placeholder="Escribe tu consulta aquí"></textarea>
+                    <textarea
+                        type="mensaje"
+                        cols="30" rows="10"
+                        placeholder="Escribe tu consulta aquí"
+                        {...register("email", { required: true })}>
+                    </textarea>
 
                     <button type="submit">Enviar</button>
-                    
                 </form>
                 {mensaje && (
-                        
-                            <p className="success-message">  {mensaje}, podés seguir comprando <Link to="/">acá</Link>.</p>
-                            
 
-                    )}
+                    <p className="success-message">  {mensaje}, podés seguir comprando <Link to="/">acá</Link>.</p>
+                )}
             </div>
         </main>
     );

@@ -9,12 +9,14 @@ const CartWidget = () => {
   const totalQuantity = getTotalQuantity();
 
   return (
+
+
     <div>
       <div className='cartWidget'>
-      <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><FiShoppingCart className="icon" /></button>
+      <button className="widget-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#a" aria-controls="offcanvasWithBothOptions"><FiShoppingCart className="icon" /></button>
       {totalQuantity > 0 && (<p>{totalQuantity}</p>)}
       </div>
-      <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="widget-canvas offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="a" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Esto es lo que vas a comprar</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -27,12 +29,6 @@ const CartWidget = () => {
         </div>
       </div>
     </div>
-
-
-    // <div className='cartWidget'>
-    //   <Link to="/carrito"><FiShoppingCart className="icon" /></Link>
-    //   {totalQuantity > 0 && (<p>{totalQuantity}</p>)}
-    // </div>
   );
 };
 
