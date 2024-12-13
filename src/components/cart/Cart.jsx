@@ -9,15 +9,14 @@ const Cart = () => {
 
     return (
         <div className="cart-container">
-            <h1>Carrito</h1>
             {cart.length === 0 ?
-                (<div><p>Su carrito esta vacío </p><Link to="/">Seguir comprando</Link></div>) :
+                (<div data-bs-dismiss="offcanvas"><p>Su carrito esta vacío </p><Link to="/">Seguir comprando</Link></div>) :
                 (<div>
                     {cart.map((prod) => (
                         <CartItem key={prod.id} prod={prod} />
                     ))}
                     {totalPrice > 0 && <p>Precio final: ${totalPrice.toLocaleString('es-AR')}</p>}
-                    <div className="cart-container-buttons">
+                    <div className="cart-container-buttons" data-bs-dismiss="offcanvas">
                         <button className="checkout-button">
                             <Link to="/checkout" style={{ textDecoration: 'none', color: 'inherit' }}>Ir a pagar</Link>
                         </button>

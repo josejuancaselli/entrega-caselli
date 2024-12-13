@@ -3,6 +3,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 import { useCart } from '../../context/CartContext';
 import './header.css';
 import ItemWidget from './ItemWidget';
+import Cart from '../cart/Cart';
 
 const CartWidget = () => {
   const { getTotalQuantity, cart } = useCart();
@@ -22,10 +23,7 @@ const CartWidget = () => {
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body" >
-          {cart.map((prod) => {
-            return <ItemWidget key={prod.id} prod={prod} />
-          })}
-          <div data-bs-dismiss="offcanvas"><Link to="/carrito">Ir al carrito</Link></div>
+          <Cart/>
         </div>
       </div>
     </div>

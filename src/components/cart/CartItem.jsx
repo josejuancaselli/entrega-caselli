@@ -10,12 +10,12 @@ const CartItem = ({ prod }) => {
             <img src={prod.img} alt={prod.nombre} className="cart-item-thumbnail"/>
             <h2>{prod.nombre} {prod.descripcion}</h2>
             <p>${prod.precio.toLocaleString('es-AR')}</p>
-            <div className="cart-item-quantity">
+            <div className="cart-quantity">
                 <button onClick={() => { decrementCart(prod) }}>-</button>
-                <p>Cantidad: {prod.quantity}</p>
+                <p>{prod.quantity}</p>
                 <button onClick={() => { incrementCart(prod) }}>+</button>
             </div>
-            <button onClick={() => { handleRemove(prod.id) }}>Quitar producto</button>
+            <button onClick={() => { handleRemove(prod.id) }}>Quitar</button>
         </div>
     );
 };
