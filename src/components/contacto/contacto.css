@@ -188,3 +188,14 @@ main h1 {
     max-width: 500px; 
     text-align: center;
 }
+
+@media (max-width: 768px){
+    .contacto-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contacto-map-list{
+        display: flex;
+        flex-direction: column;
+    }
+}

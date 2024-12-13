@@ -6,16 +6,16 @@ import { useCart } from "../context/CartContext";
 const useFetchProducts = (categoria) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    
-    
+
+
     useEffect(() => {
         const fetchProducts = async () => {
             setLoading(true);
             try {
-                
-                const productosRef = categoria
-                    ? query(collection(db, "products"), where("categoria", "==", categoria))
-                    : collection(db, "products");
+
+                const productosRef = categoria ?
+                    query(collection(db, "products"), where("categoria", "==", categoria)) :
+                    collection(db, "products");
                 const snapshot = await getDocs(productosRef);
                 const productList = snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
                 setProducts(productList);

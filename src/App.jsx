@@ -10,14 +10,17 @@ import "./App.css"
 import Inicio from "./components/inicio/Inicio"
 import Footer from "./components/footer/Footer"
 
+
 function App() {
 
 
   return (
-    <>
-      <BrowserRouter>
-        <CartProvider>
+    <div className ="app">
+      <BrowserRouter >
+        <CartProvider >
+          
           <Header />
+          
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/carrito" element={<Cart />} />
@@ -27,9 +30,10 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
+          
         </CartProvider>
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 

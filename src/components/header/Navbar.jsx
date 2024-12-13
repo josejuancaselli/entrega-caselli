@@ -4,28 +4,28 @@ import './header.css';
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            
-                <button className="navbar-toggler"
-                    type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="navbar-canvas offcanvas offcanvas-top" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Esto es lo que vas a comprar</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <ul class=" offcanvas-body navbar-list">
-                        
-                            <li><Link className="nav-link active" aria-current="page" to="/">Inicio</Link></li>
-                            <li><Link className="nav-link" to="/contacto">Contacto</Link></li>
-                            <li><Link className="dropdown-item" to="/productos/Remeras">Remeras</Link></li>
-                            <li><Link className="dropdown-item" to="/productos/Buzos">Buzos</Link></li>
-                            <li><Link className="dropdown-item" to="/productos/Zapatillas">Zapatillas</Link></li>
-                        
-                    </ul>
+            <button className="navbar-toggler"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
+                <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="navbar-canvas offcanvas offcanvas-top" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div className="offcanvas-header">
+
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-            
+                <ul className=" offcanvas-body navbar-list">
+
+                    <li data-bs-dismiss="offcanvas"><Link className="nav-link active" aria-current="page" to="/" >Inicio</Link></li>
+                    <li data-bs-dismiss="offcanvas"><Link className="nav-link" to="/contacto" >Contacto</Link></li>
+                    <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/productos/Remeras" >Remeras</Link></li>
+                    <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/productos/Buzos" >Buzos</Link></li>
+                    <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/productos/Zapatillas" >Zapatillas</Link></li>
+
+                </ul>
+            </div>
+
         </nav>
 
 
