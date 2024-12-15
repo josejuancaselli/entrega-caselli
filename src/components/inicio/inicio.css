@@ -102,6 +102,42 @@
 .search-button:hover {
     background-color: #205d86;
 }
+
+
+
+/* Estilo de los carruseles */
+.carrusel-container{
+    display: flex;
+    flex-direction: row;
+}
+.carousel {
+     /* Ajusta el ancho del carrusel */
+    margin: 20px auto; /* Centra el carrusel */
+}
+.carousel-inner{
+    max-width: 25rem;
+}
+.carousel-inner img {
+    height: 30rem; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Mantiene proporción recortando lo necesario */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1); /* Opcional: Cambia el color de los controles si no son visibles */
+}
+
+/* Botones de control del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 30px; /* Cambia el tamaño de los íconos */
+    width: 30px;
+}
+.carousel-caption{
+    background-color: #2c3e50;
+}
+
 /* Media query para móviles */
 @media (max-width: 767px) {
     .home-page h1 {
@@ -118,6 +154,11 @@
         width: 90%;
     }
 
+    .carrusel-container{
+        display: flex;
+        flex-direction: column;
+    }
+    
     .search-items li {
         padding: 0.8rem;
     }
@@ -130,6 +171,7 @@
         font-size: 0.9rem;
     }
 }
+
 
 /* Media query para tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -159,3 +201,4 @@
         font-size: 1rem;
     }
 }
+
