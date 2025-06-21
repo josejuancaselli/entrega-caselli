@@ -18,6 +18,7 @@ const useFetchProducts = (categoria) => {
                     collection(db, "products");
                 const snapshot = await getDocs(productosRef);
                 const productList = snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+                console.log(productList);
                 setProducts(productList);
             } catch (error) {
                 console.error("Error al cargar productos:", error);

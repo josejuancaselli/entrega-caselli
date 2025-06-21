@@ -15,6 +15,7 @@ const ItemListContainer = () => {
             {loading ? (
                 <Loading />
             ) : (
+                
                 <main>
                     <h1 className="text-center mb-4">{products[0]?.categoria || "Productos"}</h1>
                     <ItemList products={products} />

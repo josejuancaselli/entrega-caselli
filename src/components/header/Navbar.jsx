@@ -10,7 +10,7 @@ const Navbar = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="navbar-canvas offcanvas offcanvas-top" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div className="navbar-canvas offcanvas offcanvas-top" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                 <div className="offcanvas-header">
 
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
