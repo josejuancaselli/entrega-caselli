@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDqKG1_lELp7SAWdu8Y2sBQPDnKwJD8R34",
-  authDomain: "curadu-5e662.firebaseapp.com",
-  projectId: "curadu-5e662",
-  storageBucket: "curadu-5e662.firebasestorage.app",
-  messagingSenderId: "582591584915",
-  appId: "1:582591584915:web:cdacd77ead5b6f683e0b66"
+    apiKey: import.meta.env.VITE_APIKEY_FIREBASE,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN_FIREBASE,
+    projectId: import.meta.env.VITE_PROJECTID_FIREBASE,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET_FIREBASE,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID_FIREBASE,
+    appId: import.meta.env.VITE_APPID_FIREBASE
 };
 
 // Initialize Firebase
